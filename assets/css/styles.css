@@ -1,32 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
     margin: 0;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 350px;
+    max-width: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img {
-    width: 100px;
-    height: 100px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-header img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
+    object-fit: cover; 
 }
 
-.card h2 {
+.card-body h2 {
     margin: 0;
     color: #333;
+    font-size: 22px;
+}
+
+.job-title {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .info {
@@ -34,28 +51,52 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .info p {
     margin: 0;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    color: #444;
+    font-size: 14px;
 }
 
 .info a {
-    background: #007BFF;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
+    color: #007BFF;
     text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
+    font-weight: bold;
 }
 
-.info a:hover {
-    background: #0056b3;
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%; 
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 90%;
+    max-width: 280px; 
+    margin: 0 auto;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.email-btn {
+    background-color: #007bff;
+}
+
+.wa-btn {
+    background-color: #25D366;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
