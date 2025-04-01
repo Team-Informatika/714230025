@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3R WATER FRESH</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">3R WATER FRESH</div>
+        <div class="menu-toggle">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#order">Pesan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Selamat Datang di 3R WATER FRESH</h1>
+        <p>Penyedia Air Minum Isi Ulang & Gas LPG 3kg Terpercaya</p>
+    </section>
+    
+    <section id="about" class="about show">
+        <div class="about-container">
+            <h2>Tentang Kami</h2>
+            <p>Selamat datang di <strong>3R WATER FRESH</strong>, penyedia layanan pengisian air minum isi ulang dan distribusi gas LPG 3kg yang telah dipercaya oleh banyak pelanggan di wilayah kami. Sejak didirikan, kami memiliki komitmen kuat untuk menyediakan produk berkualitas tinggi dengan harga yang terjangkau untuk kebutuhan sehari-hari Anda.</p>
+            
+        </div>
+    </section>    
+    
+    <section id="products" class="products show">
+        <h2>Produk Kami</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://images.pexels.com/photos/4054200/pexels-photo-4054200.jpeg" alt="Air Minum Isi Ulang">
+                <h3>Air Minum Isi Ulang</h3>
+                <p>Harga: Rp5.000/galon</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/4213427/pexels-photo-4213427.jpeg" alt="Gas LPG 3kg">
+                <h3>Gas LPG 3kg</h3>
+                <p>Harga: Rp23.000/tabung</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="gallery show">
+        <h2>Galeri</h2>
+        <div class="gallery-container">
+            <img src="https://images.pexels.com/photos/4213427/pexels-photo-4213427.jpeg" alt="Depot Air Isi Ulang">
+            <img src="https://images.pexels.com/photos/4213427/pexels-photo-4213427.jpeg" alt="Tabung LPG 3kg">
+            <img src="https://images.pexels.com/photos/4213427/pexels-photo-4213427.jpeg" alt="Pelayanan Pelanggan">
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials show">
+        <h2>Testimoni Pelanggan</h2>
+        <blockquote>"Pelayanan cepat dan air sangat bersih!" - Andi</blockquote>
+        <blockquote>"Gas LPG selalu tersedia dengan harga terbaik." - Siti</blockquote>
+        <blockquote>"Sangat puas dengan pelayanan 3R WATER FRESH!" - Budi</blockquote>
+    </section>
+    
+    <section id="promo" class="promo show">
+        <h2>Promo Spesial</h2>
+        <p>Diskon khusus pelanggan baru! Dapatkan potongan harga hingga 20%.</p>
+        <div class="countdown">
+            <p>Promo berakhir dalam: <span id="countdown-timer"></span></p>
+        </div>
+    </section>
+    
+    <section id="order" class="order show">
+        <h2>Pesan Sekarang</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" required>
+            <label for="product">Produk:</label>
+            <select id="product">
+                <option>Air Minum Isi Ulang</option>
+                <option>Gas LPG 3kg</option>
+            </select>
+            <label for="quantity">Jumlah:</label>
+            <input type="number" id="quantity" min="1" required>
+            <label for="address">Alamat:</label>
+            <input type="text" id="address" required>
+            <button type="submit">Pesan</button>
+        </form>
+    </section>
+    
+    <section id="contact" class="contact show">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami di WhatsApp: <strong>08123456789</strong></p>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 3R WATER FRESH. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
