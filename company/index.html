@@ -7,6 +7,352 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: url('water.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 0;
+            padding: 0 20px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        section {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #0073e6;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .mission, .advantages, .commitment, .why-choose {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission h3, .advantages h3, .commitment h3, .why-choose h3 {
+            color: #0073e6;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .mission p, .advantages p, .commitment p, .why-choose p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .advantages ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .advantages li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .advantages i {
+            font-size: 1.5rem;
+            color: #0073e6;
+            margin-right: 10px;
+        }
+
+        .why-choose ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-choose li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .why-choose i {
+            font-size: 1.5rem;
+            color: #0073e6;
+            margin-right: 10px;
+        }
+
+        .icon-quality::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+        .icon-price::before { content: "\f02e"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+        .icon-timing::before { content: "\f017"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+        .icon-environment::before { content: "\f1b0"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+        .icon-service::before { content: "\f129"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+        .icon-ease::before { content: "\f0c9"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
+
+        .products,
+        .gallery,
+        .testimonials,
+        .promo,
+        .order,
+        .contact {
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .products .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .products .product {
+            width: 48%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .products .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product button {
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .product button:hover {
+            background: #005bb5;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery-container img {
+            width: 32%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonials blockquote {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #0073e6;
+            border-radius: 5px;
+        }
+
+        .promo .countdown {
+            font-size: 1.5rem;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            color: #0073e6;
+        }
+
+        .order form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .order form input,
+        .order form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .order form button {
+            background: #0073e6;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .order form button:hover {
+            background: #005bb5;
+        }
+
+        .map {
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #0073e6;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+                padding: 0 10px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background: #0073e6;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul.show-menu {
+                display: flex;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .products .product {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .gallery-container img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
