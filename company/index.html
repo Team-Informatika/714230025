@@ -238,7 +238,56 @@
         }
 
         .gallery,
-        .testimonials,
+        
+        #testimonials {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #1e70c1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px);
+        }
+
+        blockquote {
+            font-size: 18px;
+            color: #333;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+        }
+
+        .customer-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #666;
+        }
         .promo,
         .order,
         .contact {
@@ -300,14 +349,14 @@
             transform: scale(1.05);
         }
 
-        .testimonials blockquote {
+        /* .testimonials blockquote {
             font-size: 1.2rem;
             margin: 20px 0;
             padding: 20px;
             background-color: #f9f9f9;
             border-left: 5px solid #0073e6;
             border-radius: 5px;
-        }
+        } */
 
         .promo .countdown {
             font-size: 1.5rem;
@@ -505,11 +554,30 @@
         </div>
     </section>
     
-    <section id="testimonials" class="testimonials show">
-        <h2>Testimoni Pelanggan</h2>
-        <blockquote>"Pelayanan cepat dan air sangat bersih!" - Andi</blockquote>
-        <blockquote>"Gas LPG selalu tersedia dengan harga terbaik." - Siti</blockquote>
-        <blockquote>"Sangat puas dengan pelayanan 3R WATER FRESH!" - Budi</blockquote>
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">Testimoni Pelanggan</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <blockquote>"Pelayanan cepat dan air sangat bersih!"</blockquote>
+                <p class="customer-name">- Andi</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Gas LPG selalu tersedia dengan harga terbaik."</blockquote>
+                <p class="customer-name">- Siti</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Sangat puas dengan pelayanan 3R WATER FRESH!"</blockquote>
+                <p class="customer-name">- Budi</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Proses pemesanan mudah dan cepat, pelayanan yang sangat ramah!"</blockquote>
+                <p class="customer-name">- Rina</p>
+            </div>
+            <div class="testimonial">
+                <blockquote>"Saya selalu puas dengan kualitas air dan kecepatan pengiriman." </blockquote>
+                <p class="customer-name">- Joko</p>
+            </div>
+        </div>
     </section>
     
     <section id="promo" class="promo show">
