@@ -180,7 +180,63 @@
         .icon-service::before { content: "\f129"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
         .icon-ease::before { content: "\f0c9"; font-family: "Font Awesome 5 Free"; font-weight: 900; }
 
-        .products,
+        .products {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product {
+            width: 320px; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            background: #f9f9f9;
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            width: 100%;
+            height: 250px; 
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product h3 {
+            font-size: 1.25rem;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
         .gallery,
         .testimonials,
         .promo,
@@ -425,13 +481,17 @@
                 <img src="https://images.pexels.com/photos/4054200/pexels-photo-4054200.jpeg" alt="Air Minum Isi Ulang">
                 <h3>Air Minum Isi Ulang</h3>
                 <p>Harga: Rp5.000/galon</p>
-                <button>Beli Sekarang</button>
+                <a href="https://wa.me/6289657140789" target="_blank">
+                    <button>Beli Sekarang</button>
+                </a>
             </div>
             <div class="product">
                 <img src="https://images.pexels.com/photos/4213427/pexels-photo-4213427.jpeg" alt="Gas LPG 3kg">
                 <h3>Gas LPG 3kg</h3>
                 <p>Harga: Rp23.000/tabung</p>
-                <button>Beli Sekarang</button>
+                <a href="https://wa.me/6289657140789" target="_blank">
+                    <button>Beli Sekarang</button>
+                </a>
             </div>
         </div>
     </section>
