@@ -490,5 +490,40 @@
         <p>&copy; 2025 3R WATER FRESH. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const menuToggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", function() {
+                nav.classList.toggle("show-menu");
+            });
+
+            function reveal() {
+                sections.forEach(section => {
+                    const top = section.getBoundingClientRect().top;
+                    if (top < window.innerHeight - 100) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", reveal);
+            reveal();
+
+            const timerElement = document.getElementById("countdown-timer");
+            let countdownTime = 60 * 60 * 24; // 24 jam dalam detik
+            function updateTimer() {
+                let hours = Math.floor(countdownTime / 3600);
+                let minutes = Math.floor((countdownTime % 3600) / 60);
+                let seconds = countdownTime % 60;
+                timerElement.textContent = `${hours}h ${minutes}m ${seconds}s`;
+                if (countdownTime > 0) countdownTime--;
+            }
+            setInterval(updateTimer, 1000);
+            updateTimer();
+        });
+    </script>
 </body>
 </html>
